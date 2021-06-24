@@ -8,7 +8,7 @@
 
 Regex are short line of instructions that give you as a developer a lot of power.
 
-<img src="https://images-cdn.9gag.com/photo/aGdNNK5_700b.jpg" alt="Meme" style="zoom:50%; float:left;" />
+<img src="https://images-cdn.9gag.com/photo/aGdNNK5_700b.jpg" alt="Meme" style="zoom:25%; float:left;" />
 
 It is used in a lot of different ways. For example in search queries, password validation, or to check if a string is an E-Mail address (the RegEx in the michmich does that).
 
