@@ -6,7 +6,9 @@ namespace Regex_M226a
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("** ********************************** **\n" +
+                              "** Welcome to the RegEx code example! **\n" +
+                              "** ********************************** **");
             AudibleExit();
         }
         static void AudibleExit ()
