@@ -13,7 +13,7 @@ namespace Regex_M226a
         }
         static void AudibleExit ()
         {
-            Console.WriteLine("Press any key to exit the program.");
+            Console.WriteLine("\nPress any key to exit the program.");
             Console.ReadKey();
         }
     }
