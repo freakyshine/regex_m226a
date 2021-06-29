@@ -9,7 +9,14 @@ namespace Regex_M226a
             Console.WriteLine("** ********************************** **\n" +
                               "** Welcome to the RegEx code example! **\n" +
                               "** ********************************** **");
+            Console.WriteLine("**     What would you like to do?     **\n" +
+                              "** * * * * * * * * * * * * * * * * *  **");
+
             AudibleExit();
+        }
+        static void Menu()
+        {
+
         }
         static void AudibleExit ()
         {
