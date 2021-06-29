@@ -14,7 +14,7 @@ namespace Regex_M226a
 
             AudibleExit();
         }
-        static void Menu()
+        static void UserMenu()
         {
 
         }
