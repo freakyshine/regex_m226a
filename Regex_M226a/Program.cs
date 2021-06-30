@@ -10,6 +10,7 @@ namespace Regex_M226a
         private static Regex digits = new Regex(@"[\d]{1,}");
         private static Regex romanLetters = new Regex(@"[A-Za-z]{1,}");
         private static Regex symbols = new Regex(@"[\W]{1,}");
+        private static Regex email = new Regex(@"^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$");
 
         static void Main(string[] args)
         {
@@ -24,6 +25,7 @@ namespace Regex_M226a
 			switch (UserMenu())
 			{
                 case 0:
+                    EmailExample();
                     break;
                 case 1:
                     PasswordExample();
@@ -113,6 +115,24 @@ namespace Regex_M226a
                 Console.Write("*");
 			}
         }
+        static void EmailExample()
+        {
+            Console.WriteLine("** ********************************** **\n" +
+                              "** Example RegEx for email validation **\n" +
+                              "** ********************************** **");
+            Console.WriteLine("Enter an email address:");
+            string newEmail = Console.ReadLine();
 
+            while (!email.IsMatch(newEmail))
+            {
+                Console.Clear();
+                Console.WriteLine("This is not a valid email address");
+
+                Console.WriteLine("Enter an email address:");
+                newEmail = Console.ReadLine();
+            }
+            Console.Clear();
+            Console.Write($"Your email address is set to: {newEmail}");
+        }
     }
 }
