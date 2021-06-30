@@ -25,13 +25,12 @@ namespace Regex_M226a
 			switch (UserMenu())
 			{
                 case 0:
-                    EmailExample();
                     break;
                 case 1:
-                    PasswordExample();
+                    EmailExample();
                     break;
                 case 2:
-
+                    PasswordExample();
                     break;
                 default:
 					break;
