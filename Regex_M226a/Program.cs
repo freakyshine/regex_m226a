@@ -53,9 +53,9 @@ namespace Regex_M226a
                 Console.WriteLine("** * * * * * * * * * * * * * * * * *  **\n" +
                                   "**     What would you like to do?     **\n" +
                                   "** * * * * * * * * * * * * * * * * *  **");
-                Console.Write($"[{(menuPointer == 0 ? '*': ' ')}] Option 1\n" +
-                              $"[{(menuPointer == 1 ? '*' : ' ')}] Option 2\n" +
-                              $"[{(menuPointer == 2 ? '*' : ' ')}] Option 3");
+                Console.Write($"[{(menuPointer == 0 ? '*': ' ')}] Spuderman\n" +
+                              $"[{(menuPointer == 1 ? '*' : ' ')}] E-EEEE EEEEEEEE EEEEEEEEEE\n" +
+                              $"[{(menuPointer == 2 ? '*' : ' ')}] Password Validation");
                 userInput = Console.ReadKey().Key;
                 switch (userInput)
                 {
