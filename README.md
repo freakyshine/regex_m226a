@@ -14,10 +14,10 @@ It is used in a lot of different ways. For example in search queries, password v
 
 ## Syntax
 
-| Syntax             | Description                                                  | Usage (pseudo)   |
+| Syntax             | Description                                                  | Usage   |
 | ------------------ | ------------------------------------------------------------ | ---------------- |
 | ```[ ]```          | Matches any character in the given set<br />The set is defined in-between the brackets | /**[**a-z**]**/g |
-| /g                 | Is the expression flag to define where to apply the condition<br />There are also expression flags to only look on one line for example, but this won't be explained any further in this project | /[a-z]**/g**     |
+| ```/g```                 | Is the expression flag to define where to apply the condition<br />There are also expression flags to only look on one line for example, but this won't be explained any further in this project | /[a-z]**/g**     |
 | ```a-z```          | Includes every roman letter from a to z (**lower case**)     | /[**a-z**]/g     |
 | ```A-Z```          | Includes every roman letter from A to Z (**upper case**)     | /[**A-Z**]/g     |
 | ```0-9``` ```\d``` | Includes every Arabic digit from 0 to 9                      | /[**0-9**]/g     |
