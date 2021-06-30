@@ -24,11 +24,12 @@ namespace Regex_M226a
 			switch (UserMenu())
 			{
                 case 0:
-                    PasswordExample();
                     break;
                 case 1:
+                    PasswordExample();
                     break;
                 case 2:
+
                     break;
                 default:
 					break;
@@ -112,5 +113,6 @@ namespace Regex_M226a
                 Console.Write("*");
 			}
         }
+
     }
 }
