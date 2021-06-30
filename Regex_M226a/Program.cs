@@ -83,7 +83,7 @@ namespace Regex_M226a
             Environment.Exit(exitCode);
         }
         /// <summary>
-        /// Output the example for password regex
+        /// This method contains and displays the use of regex in relation to password validation
         /// </summary>
         static void PasswordExample()
         {
