@@ -11,6 +11,7 @@ namespace Regex_M226a
         private static Regex romanLetters = new Regex(@"[A-Za-z]{1,}");
         private static Regex symbols = new Regex(@"[\W]{1,}");
         private static Regex email = new Regex(@"^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$");
+        private static Regex spuderman = new Regex(@"Spider([\- ]?)man", RegexOptions.IgnoreCase);
 
         static void Main(string[] args)
         {
@@ -25,6 +26,7 @@ namespace Regex_M226a
 			switch (UserMenu())
 			{
                 case 0:
+                    SpuderManExample();
                     break;
                 case 1:
                     EmailExample();
@@ -85,6 +87,21 @@ namespace Regex_M226a
             Environment.Exit(exitCode);
         }
         /// <summary>
+        /// This method contains and displays the use of regex for accepting multiple spelling of words
+        /// </summary>
+        static void SpuderManExample()
+        {
+            Console.WriteLine("Try searching for the nick name of Peter Parker");
+            string searchQuery = Console.ReadLine();
+			while (!spuderman.IsMatch(searchQuery))
+            {
+                Console.Clear();
+                Console.WriteLine($"I don't think {searchQuery} is an alias for Peter Parker.");
+                Console.Write($"Try again: ");
+                searchQuery = Console.ReadLine();
+            }
+        }
+        /// <summary>
         /// This method contains and displays the use of regex in relation to password validation
         /// </summary>
         static void PasswordExample()
@@ -114,6 +131,9 @@ namespace Regex_M226a
                 Console.Write("*");
 			}
         }
+        /// <summary>
+        /// This method contains and displays the use of regex in relation to the validation of E-Mail Addresses
+        /// </summary>
         static void EmailExample()
         {
             Console.WriteLine("** ********************************** **\n" +
