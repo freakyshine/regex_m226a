@@ -15,14 +15,10 @@ namespace Regex_M226a
 
         static void Main(string[] args)
         {
-            Console.WriteLine("** ********************************** **\n" +
-                              "** Welcome to the RegEx code example! **\n" +
-                              "** ********************************** **");
-            Thread.Sleep(1500); // Keep Thread idle for 1.5s
+            LoadingScreen(2, "** ********************************** **\n" +
+                             "** Welcome to the RegEx code example! **\n" +
+                             "** ********************************** **");
 
-			// Todo: Implement loading screen
-
-			// Call menu
 			switch (UserMenu())
 			{
                 case 0:
@@ -53,7 +49,7 @@ namespace Regex_M226a
                 Console.WriteLine("** * * * * * * * * * * * * * * * * *  **\n" +
                                   "**     What would you like to do?     **\n" +
                                   "** * * * * * * * * * * * * * * * * *  **");
-                Console.Write($"[{(menuPointer == 0 ? '*': ' ')}] Spuderman\n" +
+                Console.Write($"[{(menuPointer == 0 ? '*' : ' ')}] Spuderman\n" +
                               $"[{(menuPointer == 1 ? '*' : ' ')}] E-EEEE EEEEEEEE EEEEEEEEEE\n" +
                               $"[{(menuPointer == 2 ? '*' : ' ')}] Password Validation");
                 userInput = Console.ReadKey().Key;
@@ -85,6 +81,42 @@ namespace Regex_M226a
             Console.WriteLine("\nPress any key to exit the program.");
             Console.ReadKey();
             Environment.Exit(exitCode);
+        }
+        /// <summary>
+        /// This displays a loading screen while waiting the amount of time given in the parameter time
+        /// </summary>
+        /// <param name="time">Amount of time to wait in seconds</param>
+        /// <param name="keepShowing">A string which will be shown every tick of the loading screen. This is needed because during the loading screen the screen gets cleared</param>
+        static void LoadingScreen(int time, string keepShowing)
+        {
+			for (int i = 0; i < time*4; i++)
+			{
+                Console.Clear();
+                Console.Write(keepShowing+"\n");
+                Console.WriteLine("Loading absolutly nothing. This is a fake loading screen.\n");
+				switch (i%5)
+				{
+                    case 0:
+                        Console.WriteLine("[     ]");
+                        break;
+                    case 1:
+                        Console.WriteLine("[*    ]");
+                        break;
+                    case 2:
+                        Console.WriteLine("[**   ]");
+                        break;
+                    case 3:
+                        Console.WriteLine("[***  ]");
+                        break;
+                    case 4:
+                        Console.WriteLine("[**** ]");
+                        break;
+                    default:
+                        Console.WriteLine("[*****]");
+						break;
+				}
+                Thread.Sleep(250);
+			}
         }
         /// <summary>
         /// This method contains and displays the use of regex for accepting multiple spelling of words
