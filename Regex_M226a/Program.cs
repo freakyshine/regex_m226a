@@ -151,8 +151,9 @@ namespace Regex_M226a
                 Console.WriteLine("Criteria:\n" +
                                   $"[{(!romanLetters.IsMatch(newPassword) ? ' ' : 'X')}] Contain at least 1 letter\n" +
                                   $"[{(!digits.IsMatch(newPassword) ? ' ' : 'X')}] Contain at least 1 digit\n" +
-                                  $"[{(!symbols.IsMatch(newPassword) ? ' ' : 'X')}] Contain at least 1 special character");
-                
+                                  $"[{(!symbols.IsMatch(newPassword) ? ' ' : 'X')}] Contain at least 1 special character\n"+
+                                  $"[{(newPassword.Length > 7 ? 'X' : ' ')}] Have at least 8 characters. [{newPassword.Length}]");
+
                 Console.WriteLine("Enter a password:");
                 newPassword = Console.ReadLine();
             }
